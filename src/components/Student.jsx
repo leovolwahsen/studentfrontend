@@ -19,7 +19,7 @@ export default function Student() {
     event.preventDefault();
     const student = { name, address };
     console.log(student);
-    fetch("http://localhost:8080/student/add", {
+    fetch("http://localhost:8081/student/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(student),
@@ -29,7 +29,7 @@ export default function Student() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/student/getAll")
+    fetch("http://localhost:8081/student/getAll")
       .then((res) => res.json())
       .then((result) => {
         setStudents(result);
