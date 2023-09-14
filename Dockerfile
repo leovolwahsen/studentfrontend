@@ -1,12 +1,11 @@
-FROM node:18.17.1-alpine3.18
+FROM node:18-alpine
 
 WORKDIR /code
 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY package.json .
 
-RUN npm install
+RUN npm i
 
 COPY . .
 
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0"]
+CMD ["npm", "run", "dev"]
