@@ -47,7 +47,7 @@ export default function Student() {
             marginLeft: "9rem",
           }}
         >
-          <u>Add Student</u>
+          <u>Create Student</u>
         </h1>
         <TextField
           id="outlined-basic"
